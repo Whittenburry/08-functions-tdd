@@ -4,7 +4,9 @@
  * @return {Number}
  */
 function cardValue(cardName) {
-
+  if ('ace') {
+    return 11;
+  }
 }
 
 /**

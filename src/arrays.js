@@ -5,7 +5,11 @@
  * @return {Boolean}
  */
 function sameFirst(a, b) {
-
+  if (a[0] == b[0]) {
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
@@ -15,8 +19,17 @@ function sameFirst(a, b) {
  * @return {Boolean}
  */
 function deepEquals(a, b) {
-
+  for (var i = 0; i < a.length; i++) {
+    if (a[i] != b[i]) {
+      return false;
+    }
+    if (a.length != b.length) {
+      return false;
+    }
+  }
+  return true;
 }
+
 
 function arraySum(arr) {
   var sum = 0;
