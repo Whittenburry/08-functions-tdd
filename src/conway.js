@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * Returns number of items in neighbors that are true
+ * @param  {Array} neighbors
+ * @return {Number}
+ */
 function aliveNeighbors(neighbors) {
 
 }
