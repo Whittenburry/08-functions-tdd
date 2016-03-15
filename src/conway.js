@@ -6,7 +6,13 @@
  * @return {Number}
  */
 function aliveNeighbors(neighbors) {
-
+  var count = 0;
+  for (var i = 0; i < neighbors.length; i++) {
+    if (neighbors[i] == true) {
+      count++
+    }
+  }
+  return count;
 }
 
 /**
@@ -15,7 +21,10 @@ function aliveNeighbors(neighbors) {
  * @return {Boolean}
  */
 function aliveEh(neighbors) {
-
+  if (aliveNeighbors(neighbors) == 2 || aliveNeighbors(neighbors) == 3) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -24,5 +33,9 @@ function aliveEh(neighbors) {
  * @return {Boolean}
  */
 function reviveEh(neighbors) {
+  if (aliveNeighbors(neighbors) == 3) {
+    return true;
+  }
 
+  return false;
 }

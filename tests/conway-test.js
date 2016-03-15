@@ -18,10 +18,10 @@ test(`A cell knows the rules if it's alive`, function(assert) {
   const c = aliveEh([false, true, false, true, true, false, false, false]);
   const d = aliveEh([true, true, true, false, true, false, false, false]);
 
-  assert.equal(a, false, `A cell dies of underpopulation with`);
-  assert.equal(b, true, `A stays alive in harmony`);
-  assert.equal(c, true, `A stays alive in harmony`);
-  assert.equal(d, false, `A cell dies of overpopulation with`);
+  assert.equal(a, false, `A cell dies of underpopulation with less than 2 neighbors`);
+  assert.equal(b, true, `A stays alive in harmony with 2 neighbors`);
+  assert.equal(c, true, `A stays alive in harmony with 3 neighbors`);
+  assert.equal(d, false, `A cell dies of overpopulation with more than 3 neighbors`);
 });
 
 test(`A cell knows the rules if it's dead`, function(assert) {
